@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using Random = System.Random;
 
 public class EnemyBehaviour : MonoBehaviour
 {
@@ -18,15 +13,20 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void Start()
     {
-        movementSpeed = UnityEngine.Random.Range(2f,maxSpeed);
+        movementSpeed = UnityEngine.Random.Range(minSpeed,maxSpeed);
         byte colorIntensity = (byte)(255-(255*movementSpeed/maxSpeed));
-        Debug.Log($"ms: {movementSpeed}, color intensity {colorIntensity}");
         GetComponent<Renderer>().material.color = new Color32(255,colorIntensity,colorIntensity,255);
         _player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void FixedUpdate()
     {
-        transform.position = Vector3.MoveTowards(transform.position, _player.transform.position, movementSpeed*Time.fixedDeltaTime);
+        Vector3 currentPos = transform.position;
+        
+        bool isGrounded = Physics.Raycast(currentPos, Vector3.down, 0.6f);
+        if (isGrounded)
+            transform.position = Vector3.MoveTowards(currentPos, _player.transform.position, movementSpeed*Time.fixedDeltaTime);
+        
+        if (transform.position.y < -10) Destroy(gameObject);
     }
 }

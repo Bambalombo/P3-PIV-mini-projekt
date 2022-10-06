@@ -1,7 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
-using UnityEngine.Serialization;
 using Vector3 = UnityEngine.Vector3;
 
 public class PlayerMovement : MonoBehaviour
@@ -17,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private Camera _camera;
     private Transform _cameraTransform;
     
-    private float _w,_a,_s,_d,_q,_e,_vSpeed,_hSpeed, _mouseX, _mouseY, _vertical, _horizontal;
+    private float _w,_a,_s,_d,_q,_e,_vSpeed,_hSpeed, _mouseX, _vertical, _horizontal;
     private bool _isJumping, _isGrounded;
 
     private void Start()
@@ -55,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         _horizontal = Input.GetAxisRaw("Horizontal");
         _vertical = Input.GetAxisRaw("Vertical");
         _mouseX = Input.GetAxis("Mouse X");
-        _mouseY = Input.GetAxis("Mouse Y");
+        //_mouseY = Input.GetAxis("Mouse Y");
 
         if (_isGrounded && Input.GetButtonDown("Jump")) _isJumping = true;
     }
