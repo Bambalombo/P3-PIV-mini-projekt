@@ -15,18 +15,19 @@ public class GameController : MonoBehaviour
     public float timeBuffer = 10;
     [Tooltip("The initial limit amount of to be spawned")]
     public float enemySpawnLimit = 5;
-    private float timeInterval = 0;
-    private float currentEnemies;
-    private float spawnDelay;
+    private float _incrementInterval = 0;
+    private float _spawnInterval = 0;
+    private float _currentEnemies;
+    private float _spawnDelay;
     
 
     void Start()
     {
         Cursor.visible = false;
         enemyContainer = GameObject.FindWithTag("EnemyContainer");
-        currentEnemies = (float)enemyContainer.transform.childCount;
-        Debug.Log(currentEnemies);
-        spawnDelay = 10 / enemySpawnLimit;
+        _currentEnemies = (float)enemyContainer.transform.childCount;
+        Debug.Log(_currentEnemies);
+        _spawnDelay = 20 / enemySpawnLimit;
     }
 
     private void Update()
@@ -38,17 +39,17 @@ public class GameController : MonoBehaviour
 
     private void EnemySpawnController()
     {
-        timeInterval+= Time.deltaTime;
+        _incrementInterval += Time.deltaTime;
+        _spawnInterval += Time.deltaTime;
 
-        if (timeInterval > timeBuffer)
+        if (_incrementInterval > timeBuffer)
         {
-            Debug.Log("Time Interval reached");
             enemySpawnLimit += enemyIncrement;
-            spawnDelay = 10/enemySpawnLimit;
-            timeInterval = 0;
+            _spawnDelay = 50/enemySpawnLimit;
+            _incrementInterval = 0;
         }
 
-        if (currentEnemies < enemySpawnLimit && timeInterval > spawnDelay)
+        if (/*currentEnemies < enemySpawnLimit && */_spawnInterval > _spawnDelay)
         {
             //Debug.Log(" reached");
             
@@ -61,8 +62,9 @@ public class GameController : MonoBehaviour
             Vector3 spawnPos = new Vector3(xPos, 25, zPos);
             Instantiate(enemyPrefab, spawnPos, Quaternion.identity,enemyContainer.transform);
             
-            currentEnemies = enemyContainer.transform.childCount;
-            
+            _currentEnemies = enemyContainer.transform.childCount;
+            _spawnInterval = 0;
+
         }
     }
 }
