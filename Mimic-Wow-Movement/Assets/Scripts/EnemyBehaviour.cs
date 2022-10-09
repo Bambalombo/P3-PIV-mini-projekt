@@ -1,10 +1,13 @@
 using System;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    private GameController _gameController;
+    
     private GameObject _player;
     private Rigidbody _rb;
     private Vector3 _playerPos;
@@ -31,6 +34,7 @@ public class EnemyBehaviour : MonoBehaviour
  
     private void Start()
     {
+        _gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         GameObject canvas = GameObject.FindGameObjectWithTag("KillsText");
         killsText = canvas.GetComponentInChildren<TextMeshProUGUI>();
         _player = GameObject.FindGameObjectWithTag("Player");
@@ -59,11 +63,20 @@ public class EnemyBehaviour : MonoBehaviour
         }
 
         if (transform.position.y < -10 ||
-            transform.position.x is > 110 or < -110 ||
-            transform.position.z is > 110 or < -110)
+            transform.position.x is > 130 or < -130 ||
+            transform.position.z is > 130 or < -130)
         {
             killsText.text = "Kills: "+ ++_enemiesKilled;
             Destroy(gameObject);
+
+            switch (_cubeColor) {
+                case CubeColor.Red: _gameController.AddPoints(5);
+                    break;
+                case CubeColor.Black: _gameController.AddPoints(25);
+                    break;
+                case CubeColor.Green: _gameController.AddPoints(50);
+                    break;
+            }
         }
     }
 
@@ -96,13 +109,12 @@ public class EnemyBehaviour : MonoBehaviour
             movementSpeed = 8f;
             transform.localScale += new Vector3(3, 3, 3);
             _rb.drag = 1;
-            _rb.angularDrag = 4;
+            //_rb.angularDrag = 1;
             _rb.mass = 25;
             _minMoveDistance = 2.1f;
         } 
         else if (color == CubeColor.Black)
         {
-            Debug.Log("Black Cube Spawned");
             GetComponent<Renderer>().material.color = new Color32(0,0,0,255);
             movementSpeed = 15f;
             _minMoveDistance = 1.2f;
@@ -112,12 +124,29 @@ public class EnemyBehaviour : MonoBehaviour
         else if (color == CubeColor.Red)
         {
             movementSpeed = UnityEngine.Random.Range(minSpeed,maxSpeed);
-            byte colorIntensity = (byte)(255-(255*movementSpeed/maxSpeed));
+            byte colorIntensity = (byte)(255-255*((movementSpeed-minSpeed)/(maxSpeed-minSpeed)));
             GetComponent<Renderer>().material.color = new Color32(255,colorIntensity,colorIntensity,255);
         }
         else
         {
             Debug.Log("How the fuck");
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Player")
+        {
+            Destroy(gameObject);
+            
+            switch (_cubeColor) {
+                case CubeColor.Red: _gameController.DealDamageToPlayer(5);
+                    break;
+                case CubeColor.Black: _gameController.DealDamageToPlayer(10);
+                    break;
+                case CubeColor.Green: _gameController.DealDamageToPlayer(50);
+                    break;
+            }
         }
     }
 }
