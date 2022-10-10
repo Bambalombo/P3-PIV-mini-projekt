@@ -1,18 +1,10 @@
-using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 using Cursor = UnityEngine.Cursor;
 
 public class GameController : MonoBehaviour
 {
-    private GameObject _enemyContainer;
-    public GameObject enemyPrefab;
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI healthText;
-    private float _scorePoints;
-    public UnityEngine.UI.Slider healthbar;
-    
     [Header("Player Settings")]
     public float playerHealth = 100f;
     
@@ -27,10 +19,23 @@ public class GameController : MonoBehaviour
     private float _spawnInterval = 0;
     private float _currentEnemies;
     private float _spawnDelay;
-
+    
     private float _scoreTimerInterval;
     private float _scoreTimerBuffer = 0.2f;
 
+    [Header("GameObject Connections")] 
+    public bool gameOver;
+    private float _currentScore;
+    private float _finalScore;
+    private GameObject _enemyContainer;
+    public GameObject enemyPrefab;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI healthText;
+    public UnityEngine.UI.Slider healthbar;
+    public GameObject player;
+    public GameObject gameUI;
+    public GameObject endGameCanvas;
+    
     void Start()
     {
         Cursor.visible = false;
@@ -43,33 +48,36 @@ public class GameController : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
-        EnemySpawnController();
+
+        if (gameOver) return;
         
+        EnemySpawnController();
         UpdateScore();
     }
 
     public void DealDamageToPlayer(float damage = 0)
     {
-        Debug.Log("You got hit, shit!");
-        
         playerHealth -= damage;
 
         if (playerHealth < 1)
             EndGame();
         else
             UpdateHealthBar();
-        
-        Debug.LogWarning("shit", gameObject);
     }
 
-    private void EndGame()
+    public void EndGame()
     {
-        healthbar.value = 0;
-        healthText.text = "0";
-        Debug.Log("Game over! ish");
+        gameUI.SetActive(false);
+        player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<Rigidbody>().drag = 10;
+        _enemyContainer.SetActive(false);
+
+        endGameCanvas.GetComponentInChildren<TextMeshProUGUI>().text += "\n"+_currentScore;
+        
+        endGameCanvas.SetActive(true);
+        Cursor.visible = true;
     }
     
-
     private void UpdateHealthBar()
     {
         healthbar.value = playerHealth;
@@ -89,8 +97,8 @@ public class GameController : MonoBehaviour
 
     public void AddPoints(float points = 0)
     {
-        _scorePoints += points;
-        scoreText.text = _scorePoints + " points";
+        _currentScore += points;
+        scoreText.text = _currentScore + " points";
     }
 
     private void EnemySpawnController()
@@ -120,5 +128,10 @@ public class GameController : MonoBehaviour
             _spawnInterval = 0;
 
         }
+    }
+    
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

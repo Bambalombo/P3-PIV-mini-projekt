@@ -22,7 +22,7 @@ public class EnemyBehaviour : MonoBehaviour
     private float _minMoveDistance = 0.6f;
 
     [Header("Black Cube Jump Settings")] 
-    public float jumpBuffer = 10;
+    public float jumpBuffer = 5;
     [Tooltip("The time between jumps of the black cube")]
     public float jumpInterval = 0;
 
@@ -57,10 +57,8 @@ public class EnemyBehaviour : MonoBehaviour
         else if (!isGrounded && _cubeColor == CubeColor.Black)
             transform.position = Vector3.MoveTowards(currentPos, _player.transform.position, movementSpeed*Time.fixedDeltaTime);
 
-        if (_cubeColor == CubeColor.Black)
-        {
+        if (isGrounded && _cubeColor == CubeColor.Black)
             EnemyJump();
-        }
 
         if (transform.position.y < -10 ||
             transform.position.x is > 130 or < -130 ||
@@ -70,11 +68,11 @@ public class EnemyBehaviour : MonoBehaviour
             Destroy(gameObject);
 
             switch (_cubeColor) {
-                case CubeColor.Red: _gameController.AddPoints(5);
+                case CubeColor.Red: _gameController.AddPoints(10);
                     break;
-                case CubeColor.Black: _gameController.AddPoints(25);
+                case CubeColor.Black: _gameController.AddPoints(50);
                     break;
-                case CubeColor.Green: _gameController.AddPoints(50);
+                case CubeColor.Green: _gameController.AddPoints(100);
                     break;
             }
         }
@@ -108,9 +106,8 @@ public class EnemyBehaviour : MonoBehaviour
             GetComponent<Renderer>().material.color = new Color32(0,255,0,255);
             movementSpeed = 8f;
             transform.localScale += new Vector3(3, 3, 3);
-            _rb.drag = 1;
-            //_rb.angularDrag = 1;
-            _rb.mass = 25;
+            _rb.drag = 0.5f;
+            _rb.mass = 30f;
             _minMoveDistance = 2.1f;
         } 
         else if (color == CubeColor.Black)
@@ -119,7 +116,7 @@ public class EnemyBehaviour : MonoBehaviour
             movementSpeed = 15f;
             _minMoveDistance = 1.2f;
             transform.localScale += new Vector3(1, 1, 1);
-            _rb.mass = 10;
+            _rb.mass = 10f;
         }
         else if (color == CubeColor.Red)
         {
@@ -135,7 +132,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.name == "Player" && !_gameController.gameOver)
         {
             Destroy(gameObject);
             

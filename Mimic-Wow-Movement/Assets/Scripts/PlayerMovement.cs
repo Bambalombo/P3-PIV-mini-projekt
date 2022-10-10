@@ -3,6 +3,8 @@ using Vector3 = UnityEngine.Vector3;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private GameController _gameController;
+    
     [Header("Player Control Values")]
     [SerializeField] private float moveSpeed = 10;
     [SerializeField] private float jumpHeight = 10;
@@ -19,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        _gameController = GameObject.FindGameObjectWithTag("GameController").GetComponentInChildren<GameController>();
         _rb = GetComponent<Rigidbody>();
         _transform = transform;
         moveSpeed *= Time.fixedDeltaTime*100;
@@ -31,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (_gameController.gameOver) return;
+        
         // Player movement
         Vector3 dirVector = ((_transform.forward * _vertical) + (_transform.right * _horizontal)).normalized;
         _rb.velocity = new Vector3(dirVector.x * moveSpeed, _rb.velocity.y, dirVector.z * moveSpeed);
@@ -44,6 +49,15 @@ public class PlayerMovement : MonoBehaviour
         {
             _rb.velocity += (new Vector3(0, jumpHeight, 0));
             _isJumping = false;
+        }
+        
+        if (transform.position.y < -10 ||
+            transform.position.x is > 130 or < -130 ||
+            transform.position.z is > 130 or < -130)
+        {
+            _rb.useGravity = false;
+            transform.position = transform.position;
+            _gameController.EndGame();
         }
     }
 
