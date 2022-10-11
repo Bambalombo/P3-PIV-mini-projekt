@@ -24,7 +24,7 @@ The project contains four scripts:
 ## 2. Time schedule & Resources
 ### 2.1 Time schedule
 
-#Activity | #Approx time spent |
+Activity | Approx time spent |
 --- | --- |
 Player movement experimentation | 2.50 hrs |
 Final movement and camera movement implementation|1.00 hrs|
@@ -44,7 +44,8 @@ Implementing and fine tuning player death|2.00 hrs|
 Adding end-game screen|1.50 hrs|
 Adding restart button|0.25 hrs|
 Playtesting throughout project|0.75 hrs|
-3Approx total:|#24.50 hrs|
+Approx total:|24.50 hrs|
+--- | --- |
 
 ### 2.2 Resources used (in order)
 - Book: Unity in Action by Joe Hocking
