@@ -25,45 +25,25 @@ The project contains four scripts:
 ### 2.1 Time schedule
 
 #Activity | #Approx time spent |
---- | --- |
 Player movement experimentation | 2.50 hrs |
---- | --- |
 Final movement and camera movement implementation|1.00 hrs|
---- | --- |
 Player jump && isGrounded check|1.50 hrs|
---- | --- |
 Enemy move towards player|1.00 hrs|
---- | --- |
 Implementing laser shoot function|1.00 hrs|
---- | --- |
 Randomize Red Enemy color and speed|1.50 hrs|
---- | --- |
 Implementing and tuning explosions|2.00 hrs|
---- | --- |
 Implementing enemy spawn controller|2.00 hrs|
---- | --- |
 Implementing green cube and making it heavier and have drag|0.50 hrs|
---- | --- |
 Implementing black cube and its jump functionality|1.50 hrs|
---- | --- |
 Finalizing enemy cube behavior|1.50 hrs|
---- | --- |
 Implementing AimController|2.50 hrs|
---- | --- |
 Implementing point system|0.50 hrs|
---- | --- |
 Implementing health bar|1.00 hrs|
---- | --- |
 Implementing and fine tuning player death|2.00 hrs|
---- | --- |
 Adding end-game screen|1.50 hrs|
---- | --- |
 Adding restart button|0.25 hrs|
---- | --- |
 Playtesting throughout project|0.75 hrs|
---- | --- |
 3Approx total:|#24.50 hrs|
---- | --- |
 
 ### 2.2 Resources used (in order)
 - Book: Unity in Action by Joe Hocking
