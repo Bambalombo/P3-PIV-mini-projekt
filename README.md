@@ -8,15 +8,13 @@ In the meantime, however, while testing out my own movement implementation, I ha
 
 
 ### 1.2 Project elements: 
-○ Project parts as bullet points – scripts, hierarchy objects, materials, levels, etc. and how they are used/what they do.
-
 The project only has one scene, the hierarchy of which contains the following parts:
-A GameController object holding a GameController script.
-A player element
-A platform on which the game takes place
-A container for holding all the enemies instantiated during runtime.
-A Canvas with  in-game UI containing a healthbar, a killscore and a points score.
-A Canvas which becomes active once the game ends, containing a small message, your final score, and a retry button.
+- A GameController object holding a GameController script.
+- A player element
+- A platform on which the game takes place
+- A container for holding all the enemies instantiated during runtime.
+- A Canvas with  in-game UI containing a healthbar, a killscore and a points score.
+- A Canvas which becomes active once the game ends, containing a small message, your final score, and a retry button.
 
 The project contains four scripts:
 - GameController - which is responsible for spawning enemies at a changing pace, updating the healthbar, keeping track of player health, and updating the score.
@@ -25,6 +23,11 @@ The project contains four scripts:
 - LaserAim - This script is attached to a LaserController GameObject, a child of the player object. This script is responsible for a raycast which shoots out in front of the player. This ray is responsible for returning information about the enemies hit. If enemies are hit by the ray, that is, when the player looks at an enemy, and is within range, the player is able to shoot using the Left mouse button. This then applies an ExplosionForce the the enemy hit as well as nearby enemies in a radius around the hit. The LaserController object also has a LineRenderer attached. This is used to visualise the shot.
 ## 2. Time schedule & Resources
 ### 2.1 Time schedule
+
+Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
+Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
+
 Player movement experimentation
 2.50 hrs
 Final movement and camera movement implementation
