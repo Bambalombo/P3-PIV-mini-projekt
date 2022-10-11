@@ -44,8 +44,7 @@ Implementing and fine tuning player death|2.00 hrs|
 Adding end-game screen|1.50 hrs|
 Adding restart button|0.25 hrs|
 Playtesting throughout project|0.75 hrs|
-Approx total:|24.50 hrs|
---- | --- |
+**Approx total:**|**24.50 hrs**|
 
 ### 2.2 Resources used (in order)
 - Book: Unity in Action by Joe Hocking
@@ -65,3 +64,4 @@ Approx total:|24.50 hrs|
 - Unity Forum Question: Public class not showing in inspector.
 - YouTube tutorial: Create a HEALTH BAR, Volume slider and LOADING BAR!
 - Unity Forum Question: UI Relative to screen size
+- Stackoverflow Question: https://stackoverflow.com/questions/39378020/how-to-display-table-in-readme-md-file-in-github
