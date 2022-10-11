@@ -47,22 +47,22 @@ Playtesting throughout project|0.75 hrs|
 **Approx total:**|**24.50 hrs**|
 
 ### 2.2 Resources used (in order)
-- Book: Unity in Action by Joe Hocking
-- Unity Forum Question: [Move Player without acceleration]()
-- YouTube tutorial: How to Check if Your Player is GROUNDED Unity Tutorial
-- Unity Documentation: Cursor.visible
-- Unity Documentation: Application.Quit
-- Unity Documentation: Material.SetColor
-- Unity Forum Question: Change GameObject color by C# script
-- Unity Forum Question: Compare Tag on Collision (Collider.CompareTag)
-- YouTube tutorial: Shooting Laser using Raycast and LineRenderer
-- YouTube tutorial: Unity Explosion Force/knockback - Making a bomb
-- Unity Documentation: Rigidbody.AddExplosionForce
-- Unity Forum Question: number of colliders inside a trigger.
-- Unity Forum Question: Convert from local position to world position
-- Unity Forum Question: Random.randomBoolean function!
-- Unity Forum Question: Public class not showing in inspector.
-- YouTube tutorial: Create a HEALTH BAR, Volume slider and LOADING BAR!
-- Unity Forum Question: UI Relative to screen size
-- Stackoverflow Question: []https://stackoverflow.com/questions/39378020/how-to-display-table-in-readme-md-file-in-github
+- Book: [Unity in Action](https://www.manning.com/books/unity-in-action-second-edition) by [Joe Hocking](https://www.newarteest.com/)
+- Unity Forum Question: [Move Player without acceleration](https://answers.unity.com/questions/1643729/move-player-without-acceleration.html)
+- YouTube tutorial: [How to Check if Your Player is GROUNDED Unity Tutorial](https://www.youtube.com/watch?v=j41UHuA1bLM)
+- Unity Documentation: [Cursor.visible](https://docs.unity3d.com/ScriptReference/Cursor-visible.html)
+- Unity Documentation: [Application.Quit](https://docs.unity3d.com/ScriptReference/Application.Quit.html)
+- Unity Documentation: [Material.SetColor](https://docs.unity3d.com/ScriptReference/Material.SetColor.html)
+- Unity Forum Question: [Change GameObject color by C# script](https://forum.unity.com/threads/change-gameobject-color-by-c-script.923672/)
+- Unity Forum Question: [Compare Tag on Collision (Collider.CompareTag)](https://answers.unity.com/questions/1272543/compare-tag-on-collision-collidercomparetag.html)
+- YouTube tutorial: [Shooting Laser using Raycast and LineRenderer | Unity Game Engine](https://www.youtube.com/watch?v=YjpKxjzwado)
+- YouTube tutorial: [Unity Explosion Force/knockback - Making a bomb](https://www.youtube.com/watch?v=SKdM2ERWy8U)
+- Unity Documentation: [Rigidbody.AddExplosionForce](https://docs.unity3d.com/ScriptReference/Rigidbody.AddExplosionForce.html)
+- Unity Forum Question: [number of colliders inside a trigger.](https://answers.unity.com/questions/1742827/number-of-colliders-inside-a-triggernumber-of-coll.html)
+- Unity Forum Question: [Convert from local position to world position](https://answers.unity.com/questions/147184/convert-from-local-position-to-world-position.html)
+- Unity Forum Question: [Random.randomBoolean function!](https://forum.unity.com/threads/random-randomboolean-function.83220/)
+- Unity Forum Question: [Public class not showing in inspector.](https://forum.unity.com/threads/public-class-not-showing-in-inspector.919190/)
+- YouTube tutorial: [Create a HEALTH BAR, Volume slider and LOADING BAR!](https://www.youtube.com/watch?v=tWUyEfD0kV0&t=311s)
+- Unity Forum Question: [UI Relative to screen size](https://answers.unity.com/questions/1178324/ui-relative-to-screen-size.html)
+- Stackoverflow Question: [How to display Table in README.md file in Github?](https://stackoverflow.com/questions/39378020/how-to-display-table-in-readme-md-file-in-github)
 - GitHub Documentation: [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
