@@ -28,7 +28,7 @@ Activity | Approx time spent |
 --- | --- |
 Player movement experimentation | 2.50 hrs |
 Final movement and camera movement implementation|1.00 hrs|
-Player jump && isGrounded check|1.50 hrs|
+Player jump and isGrounded check|1.50 hrs|
 Enemy move towards player|1.00 hrs|
 Implementing laser shoot function|1.00 hrs|
 Randomize Red Enemy color and speed|1.50 hrs|
@@ -48,7 +48,7 @@ Playtesting throughout project|0.75 hrs|
 
 ### 2.2 Resources used (in order)
 - Book: Unity in Action by Joe Hocking
-- Unity Forum Question: Move Player without acceleration
+- Unity Forum Question: [Move Player without acceleration]()
 - YouTube tutorial: How to Check if Your Player is GROUNDED Unity Tutorial
 - Unity Documentation: Cursor.visible
 - Unity Documentation: Application.Quit
@@ -64,4 +64,5 @@ Playtesting throughout project|0.75 hrs|
 - Unity Forum Question: Public class not showing in inspector.
 - YouTube tutorial: Create a HEALTH BAR, Volume slider and LOADING BAR!
 - Unity Forum Question: UI Relative to screen size
-- Stackoverflow Question: https://stackoverflow.com/questions/39378020/how-to-display-table-in-readme-md-file-in-github
+- Stackoverflow Question: []https://stackoverflow.com/questions/39378020/how-to-display-table-in-readme-md-file-in-github
+- GitHub Documentation: [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
