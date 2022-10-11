@@ -2,7 +2,7 @@
 ## 1. Project overview
 ### 1.1 Introduction:
 
-This project started out as a personal for-fun project in which i wanted to mimic the movement found in World of Warcraft, since I find it really satisfying, and the built in Unity Input.GetAxis() method with “Horizontal” and “Vertical” arguments has a kind of wind-up to it, which I didn’t like.
+This project started out as a personal for-fun project in which i wanted to mimic the movement found in World of Warcraft, since I find it really satisfying, and the built in Unity Input.GetAxis() method has a kind of wind-up to it, which I didn’t like.
 After hours of fiddling around trying to find the cleanest, shortest way of completing this task I realized that in Unity, there exists a method called Input.GetAxisRaw(), which does exactly the same thing as Input.GetAxis(), but without the wind-up. So in the end Unity could do what I had tried but simpler, all along.
 In the meantime, however, while testing out my own movement implementation, I had begun experimenting a lot with rigidbodies and explosions, and the project evolved into a kind of mini-game where boxes fall from the sky, and you have to keep them away from you with your laser-explosions.
 
