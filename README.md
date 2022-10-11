@@ -25,6 +25,7 @@ The project contains four scripts:
 ### 2.1 Time schedule
 
 #Activity | #Approx time spent |
+--- | --- |
 Player movement experimentation | 2.50 hrs |
 Final movement and camera movement implementation|1.00 hrs|
 Player jump && isGrounded check|1.50 hrs|
