@@ -1,4 +1,4 @@
-# Nice-ass title
+# Cube-Invasion
 ## 1 Project overview
 ### 1.1 Introduction:
 
@@ -64,7 +64,7 @@ Playtesting throughout project|0.75 hrs|
 - Unity Forum Question: [Convert from local position to world position](https://answers.unity.com/questions/147184/convert-from-local-position-to-world-position.html)
 - Unity Forum Question: [Random.randomBoolean function!](https://forum.unity.com/threads/random-randomboolean-function.83220/)
 - Unity Forum Question: [Public class not showing in inspector.](https://forum.unity.com/threads/public-class-not-showing-in-inspector.919190/)
-- YouTube tutorial: [Create a HEALTH BAR, Volume slider and LOADING BAR!](https://www.youtube.com/watch?v=tWUyEfD0kV0&t=311s)
+- YouTube tutorial: [Create a HEALTH BAR, Volume slider and LOADING BAR! | Unity UI Tutorial](https://www.youtube.com/watch?v=tWUyEfD0kV0&t=311s)
 - Unity Forum Question: [UI Relative to screen size](https://answers.unity.com/questions/1178324/ui-relative-to-screen-size.html)
 - Stackoverflow Question: [How to display Table in README.md file in Github?](https://stackoverflow.com/questions/39378020/how-to-display-table-in-readme-md-file-in-github)
 - GitHub Documentation: [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
