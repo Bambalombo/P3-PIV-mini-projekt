@@ -36,6 +36,8 @@ public class GameController : MonoBehaviour
     public GameObject gameUI;
     public GameObject endGameCanvas;
     
+    public int enemiesKilled = 0;
+    
     void Start()
     {
         Cursor.visible = false;

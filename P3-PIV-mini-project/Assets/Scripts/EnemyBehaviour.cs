@@ -1,8 +1,5 @@
-using System;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class EnemyBehaviour : MonoBehaviour
 {
@@ -27,11 +24,10 @@ public class EnemyBehaviour : MonoBehaviour
     public float jumpInterval = 0;
 
     private static short _currentEnemyNum = 0;
-    private static int _enemiesKilled = 0;
     
     enum CubeColor { Green, Red, Black};
     private CubeColor _cubeColor;
- 
+
     private void Start()
     {
         _gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
@@ -64,7 +60,7 @@ public class EnemyBehaviour : MonoBehaviour
             transform.position.x is > 130 or < -130 ||
             transform.position.z is > 130 or < -130)
         {
-            killsText.text = "Kills: "+ ++_enemiesKilled;
+            killsText.text = "Kills: "+ ++_gameController.enemiesKilled;
             Destroy(gameObject);
 
             switch (_cubeColor) {

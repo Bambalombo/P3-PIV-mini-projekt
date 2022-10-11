@@ -1100,7 +1100,7 @@ GameObject:
   - component: {fileID: 492077315}
   - component: {fileID: 492077314}
   m_Layer: 0
-  m_Name: Plane (1)
+  m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1178,7 +1178,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492077313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -12, z: 0}
+  m_LocalPosition: {x: 0, y: -15, z: 0}
   m_LocalScale: {x: 35, y: 1, z: 35}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2431,6 +2431,7 @@ MonoBehaviour:
   player: {fileID: 168539063}
   gameUI: {fileID: 1248929559}
   endGameCanvas: {fileID: 1908576887}
+  enemiesKilled: 0
 --- !u!1 &2031789165
 GameObject:
   m_ObjectHideFlags: 0
