@@ -1,5 +1,5 @@
 # Nice-ass title
-## 1. Project overview
+## 1 Project overview
 ### 1.1 Introduction:
 
 This project started out as a personal for-fun project in which i wanted to mimic the movement found in World of Warcraft, since I find it really satisfying, and the built in Unity Input.GetAxis() method has a kind of wind-up to it, which I didn’t like. After hours of fiddling around I realized that in Unity has a method Input.GetAxisRaw(), which does exactly the same thing as what I was looking for.
@@ -15,12 +15,14 @@ The project only has one scene, the hierarchy of which contains the following pa
 - A Canvas with in-game UI containing a healthbar, a killscore and a points score.
 - A Canvas which becomes active once the game ends, containing a small message, your final score, and a retry button.
 
+
 The project contains four scripts:
 - **GameController** - which is responsible for spawning enemies at a changing pace, updating the healthbar, keeping track of player health, and updating the score.
 - **PlayerMovement** - which is responsible for player movements. The movement of the player in the game is controlled by WASD and the arrow-keys. The camera, which rotates horizontally around the player, is controlled by moving the mouse, left to right.
 - **EnemyBehavior** - This is the script attached to the Enemy prefab. It first attaches a color (red, black or green) to the cube and has the cube behave differently based on this color. The red cubes are lightweight and fast. The black cubes are semi-heavy, medium-sized, and jump around. The green cubes are very heavy, large, and slow.
 - **LaserAim** - This script is attached to a LaserController GameObject, a child of the player object. This script is responsible for a raycast which shoots out in front of the player. This ray is responsible for returning information about the enemies hit. If enemies are hit by the ray, that is, when the player looks at an enemy, and is within range, the player is able to shoot using the Left mouse button. This then applies an ExplosionForce the the enemy hit as well as nearby enemies in a radius around the hit. The LaserController object also has a LineRenderer attached. This is used to visualise the shot.
-## 2. Time schedule & Resources
+
+## 2 Time schedule & Resources
 ### 2.1 Time schedule
 
 Activity | Approx time spent |
@@ -44,6 +46,7 @@ Adding end-game screen|1.50 hrs|
 Adding restart button|0.25 hrs|
 Playtesting throughout project|0.75 hrs|
 **Approx total:**|**24.50 hrs**|
+
 
 ### 2.2 Resources used (in order)
 - Book: [Unity in Action](https://www.manning.com/books/unity-in-action-second-edition) by [Joe Hocking](https://www.newarteest.com/)
