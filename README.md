@@ -2,16 +2,16 @@
 ## 1 Project overview
 ### 1.1 Introduction:
 
-This project started out as a personal for-fun project in which i wanted to mimic the movement found in World of Warcraft, since I find it really satisfying, and the built in Unity Input.GetAxis() method has a kind of wind-up to it, which I didn’t like. After hours of fiddling around I realized that in Unity has a method Input.GetAxisRaw(), which does exactly the same thing as what I was looking for.
+This project started out as a personal for-fun project in which i wanted to mimic the movement found in World of Warcraft, since I find it really satisfying. The built-in Unity Input.GetAxis() method has a kind of wind-up to it, which I didn’t like. After hours of fiddling aroun with alternatives I realized that Unity already has a method called Input.GetAxisRaw(), which does exactly the same thing as what I was looking for.
 
-In the meantime, however, while testing out my own movement implementation, I had begun experimenting a lot with rigidbodies and explosions, and the project evolved into a kind of mini-game where boxes fall from the sky, and you have to keep them away from you with laser-powered "explosions".
+In the meantime while testing out my own movement implementation I had, however, begun experimenting a lot with rigidbodies, and the project evolved into a kind of mini-game where evil boxes with ill intent fall from the sky, and you have to keep them away from you with laser-powered "explosions".
 
 ### 1.2 Project elements: 
 The project only has one scene, the hierarchy of which contains the following parts:
 - A GameController GameObject holding a GameController script.
 - A Player GameObject
 - A Platform on which the game takes place
-- A Container for holding all the enemies instantiated during runtime.
+- A Container for holding the enemy cubes instantiated during runtime.
 - A Canvas with in-game UI containing a healthbar, a killscore and a points score.
 - A Canvas which becomes active once the game ends, containing a small message, your final score, and a retry button.
 
