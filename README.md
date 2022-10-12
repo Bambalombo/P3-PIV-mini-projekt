@@ -51,6 +51,7 @@ Playtesting throughout project|0.75 hrs|
 ### 2.2 Resources used (in order)
 - Book: [Unity in Action](https://www.manning.com/books/unity-in-action-second-edition) by [Joe Hocking](https://www.newarteest.com/)
 - Unity Forum Question: [Move Player without acceleration](https://answers.unity.com/questions/1643729/move-player-without-acceleration.html)
+- Youtube tutorial: [Move Camera Around Object in Unity](https://www.youtube.com/watch?v=zVX9-c_aZVg&t=875s)
 - YouTube tutorial: [How to Check if Your Player is GROUNDED Unity Tutorial](https://www.youtube.com/watch?v=j41UHuA1bLM)
 - Unity Documentation: [Cursor.visible](https://docs.unity3d.com/ScriptReference/Cursor-visible.html)
 - Unity Documentation: [Application.Quit](https://docs.unity3d.com/ScriptReference/Application.Quit.html)
